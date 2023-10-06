@@ -1,5 +1,4 @@
 #Task 8.1
-s='АГЦТАГАГЦТЦТ'
 def repl(s):
     d=s.replace('АГ', 'ГА')
     f=d.replace('ЦТ', 'ЦАГТ')
