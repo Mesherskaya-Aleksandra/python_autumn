@@ -265,5 +265,3 @@ def convert_to_far(temp):
     result=9/5*temp+32
     return result
 print(convert_to_far(18))
-
-

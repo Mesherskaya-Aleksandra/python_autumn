@@ -215,9 +215,9 @@
 # print('1234532'.partition('34'))
 # print('123434532'.count('34'))
 
-def f(x):
-    return x%10
-print(sorted([123,12,33], key=f))
+# def f(x):
+#     return x%10
+# print(sorted([123,12,33], key=f))
 
-#
-# print(sorted([123,12,33], key=lambda x: x%10))
+
+print(sorted([123,12,33], key=lambda x: x%10))

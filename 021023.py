@@ -198,19 +198,3 @@ print(counter())
 print(222, num)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
