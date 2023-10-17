@@ -1,200 +1,226 @@
-# def roman_to_decimal(number):
-#     dct = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-#     res = 0
-#     while number!="":
-#         for i in dct:
-#             if number.startswith(i):
-#                 res+=dct[i]
-#                 number=number[len(i):]
-#                 break
-#         return res
-# print(roman_to_decimal(input()))
+# a=tuple(i for i in range(5))
+# print(a)
+
+# b=[i**3 if i%2 ==1 else i**2 for i in range(1,11)]
+# print(b)
+
+# import functools
+# print(functools.reduce(lambda x,y:x*y, [10,20,30]))
+# import functools
+# print(functools.reduce(lambda x,y:x+y, [10,20,30]))
+# import functools
+# print(functools.reduce(lambda x,y:x+y, ['a', 'c', 'ff'], 'x='))
+# import functools
+# s=int(input())
+# print(functools.reduce(lambda x,y:x*y,range(2,s+1),1))
+
+# from functools import cmp_to_key
+# def mul(x,y):
+#     if x>y:return -1
+#     elif x==y: return 0
+#     else: return 1
+# print(sorted([1,0,-1,3,4], key=cmp_to_key(mul)))
+
+# import itertools
+# for k in itertools.combinations([1,2,3,4],2):
+#     print(k)
+
+# import itertools
+# for k in itertools.combinations_with_replacement([1,2,3,4],2):
+#     print(k)
+
+# import itertools
+# for k in itertools.combinations_with_replacement([1,2,5,10],3):
+#     print(k, sum(k))
+# else:
+#     print()
+
+# import itertools
+# for k in itertools.combinations([1,2,5,10],3):
+#     print(k,sum(k))
+
+# import itertools
+# tes=set()
+# for k in itertools.combinations([1,2,5,10],3):
+#     tes.add(sum(k))
+# print(tes)
+
+# import itertools
+# tes=set()
+# for k in itertools.combinations([1,1,2,2,5,5,10,10],3):
+#     # print(k)
+#     tes.add(sum(k))
+# print(tes)
+
+# import itertools
+# tes=set()
+# for k in itertools.combinations([1,2,5,10]*2,3):
+#     # print(k)
+#     tes.add(sum(k))
+# print(tes)
+
+# try:
+#     a=1/0
+# except ZeroDivisionError:
+#     print("Возникло исключение")
+#     a=0
+# else:
+#     print('Ok')
+# finally:
+#     print('Далее')
+
+# try:
+#     print('До')
+#     a=1//1
+# except ZeroDivisionError:
+#     print("Возникло исключение")
+#     a=0
+# else:
+#     print('Ok')
+# finally:
+#     print('Далее',a)
 
 
-# s=set(input().split(", "))
-# z=set(input().split(", "))
-# print(len(s.intersection(z)))
-
-# tes={}
-# mno=set()
-# print(type(tes), type(mno))
-#
-# def pod_nalog(dokhod):
-#     result=dokhod*0,13
-#     return result
-#
 # while True:
-#     dokhod=float(input())
-#     if dokhod<=0: break
-#     print(dokhod, pod_nalog(dokhod), dokhod*0,13)
+#     try:
+#         a=int(input('---->'))
+#         print(a)
+#         if a==0: break
+#     except ValueError:
+#         print('Ошибка, повторите ввод')
+
+# a=[1,2,3]
+# try:
+#     print(a[3])
+# except IndexError:
+#     print("***")
 
 
-# def pod_nalog(dokhod, percent=13):
-#     result = dokhod * percent/100
-#     return result
-# while True:
-#     dokhod1 = float(input())
-#     percent1=float(input())
-#     if dokhod1 <= 0: break
-#     print(dokhod1, pod_nalog(dokhod1, percent1))
-#     print(dokhod1, pod_nalog(dokhod1))
+# for i in '123':
+#     print('Попытка', i)
+#     try:
+#         u=input('--->')
+#         f=open(u, encoding='utf-8')
+#         s = f.read()
+#         print("Файл 'mmm11111.txt' найден")
+#     except FileNotFoundError:
+#         print("Файл не найден, введите другое имя")
 
-# def my_function(arg1, arg2, arg3):
-#     print(arg1, arg2, arg3)
-# my_function(arg2=2,arg3=3, arg1=1)
+# def fun(n):
+#     for x in range(n):
+#         print('до', x)
+#         yield x*x
+#         print('после', x)
+# g=fun(3)
+# print(g)
+# for k in g:
+#     print('перед печатью')
+#     print('k=',k)
+#     print('после печати')
 
-# def my_function(arg1, arg2, *args):
-#     print(arg1, arg2)
-#     for i in args:
-#         print(i)
-# my_function(123, 111, 222, 45645,4,7,8)
-
-# def multi(*args):
-#     res = 1
-#     for i in args:
-#         res*=i
-#     return res
-# print(multi(100))
-
-# def multi(**kwargs):
-#     print(kwargs)
-#     res=1
-#     for i in kwargs.values():
-#         res*=i
-#     return res
-# print(multi(a=100, b=200))
-
-# def multi(**kwargs):
-#     print(kwargs)
-#     res=1
-#     for i,j in kwargs.items():
-#         res*=j
-#     return res
-# print(multi(a=100, b=200))
-
-# def multi(**kwargs):
-#     res1=1
-#     res2=""
-#     for j in kwargs.values():
-#         if type (j)==int:
-#             res1*=j
-#         elif type(j)==str:
-#             res2+=j
+# def fun(n):
+#     for x in range(n):
+#         if x%2==0:
+#             print('четный',x)
+#             yield x*x
 #         else:
-#             print(j)
-#     return res1, res2
-#     return res
-# print(multi(a='100', c=200000, x='rer', b=200, f=5.4, k=[3,3,3]))
+#             print('нечетный', x)
+#             yield x**3
+# g=fun(8)
+# print(g)
+# for k in g:
+#     print('k=',k)
 
+# def fun(n):
+#     for x in range(n):
+#         if x%2==0:
+#             yield x*x
+#         else:
+#             yield x**3
+# g=fun(4)
+#
+# try:
+#     print(next(g))
+#     print(next(g))
+#     print(next(g))
+#     print(next(g))
+#     print(next(g))
+# except StopIteration:
+#     print('Все закончено')
 
-# def all_args(var1, *args, **kwargs):
-#     print(var1)
-#     print(args)
-#     print(kwargs)
-#
-# all_args(1,2,3, x=100)
+# def fun(n):
+#     for x in range(n):
+#         if x%2==0:
+#             yield x*x
+#         else:
+#             yield x**3
+# g=fun(4)
+# for k in g:
+#     print(k)
 
-# def all_args(var1, *args, **kwargs):
-#     print(var1)
-#     print(args)
-#     print(kwargs)
-#
-# all_args(1, x=100)
+# def fun(n):
+#     for x in range(n):
+#         if x%2==0:
+#             yield x*x
+#         else:
+#             yield x**3
+# g=fun(4)
+# for k in range(10):
+#     try:
+#         print(next(g))
+#     except StopIteration:
+#         print('Конец')
+#         break
 
-# def all_args(var1, *args, **kwargs):
-#     print(var1)
-#     print(args)
-#     print(kwargs)
-#
-# all_args(1)
+# def factorial(n):
+#     f,k=1,1
+#     while True:
+#         print(k, end=' ')
+#         yield f
+#         k+=1
+#         if k>n-1:break
+#         f*=k
+# for m in factorial(10):
+#     print(m)
 
-# def all_args(var1, xyz, *args, **kwargs):
-#     print(var1)
-#     print(args)
-#     print(kwargs)
-#
-# all_args(1,True)
+# def factorial():
+#     f,k=1,1
+#     while True:
+#         print(k, end=' ')
+#         yield f
+#         k+=1
+# gf=factorial()
+# while True:
+#     print(next(gf))
+#     input()
 
-# def pod_nalog(dokhod, *args):
-#     if len(args)==0:
-#         return dokhod*13/100
-#     else:
-#         return dokhod*args[0]/100
-#
-# print(pod_nalog(100,13))
-# print(pod_nalog(100,13,10,20))
-# print(pod_nalog(100))
-#
-#
-# def pod_nalog(dokhod, *args):
-#     if args==():
-#         return dokhod * 13 / 100
-#     else:
-#         res=[]
-#         for i in args:
-#             res.append(dokhod*i/100)
-#         return res
-#
-#
-# print(pod_nalog(100, 13))
-# print(pod_nalog(100, 13, 10, 20))
-# print(pod_nalog(100))
-
-
-# def uni_let(lst):
-#     dct={}
+# lst=[1,2,4,8,16,32]
+# def sum_firsts():
+#     s=0
 #     for i in lst:
-#         dct[i]=dct.get(i,0)+1
-#     return dct.keys(), dct.values()
-# print(uni_let(['All', 'your', 'need', 'is', 'love']))
+#         s+=i
+#         yield s
+# gf = sum_firsts()
+# for k in gf:
+#     print(k)
 
-# def uni_let(lst):
-#     s=''.join(lst)
-#     string=''.join(sorted(set(s)))
-#     return string, len(string)
-# print(uni_let(['all', 'your', 'need', 'is', 'love']))
-# print(uni_let([]))
-# print(uni_let('rgrqgrqg'))
+# lst=[1,10,100,1000,10000,100000]
+# def sum_firsts():
+#     s=0
+#     for i in lst:
+#         s+=i
+#         yield s
+# while True:
+#     print(next(sum_firsts()))
+#     input()
 
-# def func(n):
-#     def func_1(p):
-#         return p*p
-#     def func_2(w):
-#         return w+w
-#     if n<10:
-#         return func_1(n)
-#     else:
-#         return func_2(n)
-# x=int(input())
-# print(func(x))
-#
-# x=100
-# def ddd(y):
-#     z=y*y
-#     return z
-# print(ddd(x))
+def f123():
+    n=1
+    while True:
+        for i in range(n):
+            yield n
+        n+=1
 
-
-# x=100
-# def ddd(y):
-#     global z
-#     z=y*y
-#     return z
-# print(ddd(x))
-# print(z)
-
-num =123
-print(111,num)
-def counter():
-    num=0
-    def incr():
-        nonlocal num
-        num+=1
-        return num
-    x=incr()
-    x = incr()
-    return x
-print(counter())
-print(222, num)
-
-
+gf=f123()
+for i in range(20):
+    print(next(gf), end=' ')
